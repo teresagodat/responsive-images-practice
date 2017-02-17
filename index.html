@@ -7,6 +7,12 @@
   <style type="text/css">
     body {
       background-image: url("gradient-background.jpg");
+      
+    }
+    
+    header {
+      background-image: url("space-header.jpg");
+      background-size: cover;
     }
 
     img { max-width: 100%; }
@@ -16,6 +22,8 @@
       margin: auto;
       border: solid 1px rgba(189, 63, 191, 0.62);
       display: flex;
+      background: #960524;
+      background: repeating-radial-gradient(blue,#4b2e83 10%, #e8e3d3 15%);
       flex-wrap: wrap;
       justify-content: space-around;
     }
@@ -54,11 +62,15 @@
       </div>
 
       <div class="photo-frame">
-        <img src="dragon.jpg" alt="a fire-breathing cat">
+        <img srcset="dragon.jpg 1280w, dragon-800w.jpg 800w, dragon-400w.jpg 400w"
+              sizes="(max-width: 800px) 400px, (max-width: 1600px) 800px, (min-width: 1601px) 1200px"
+              src="dragon.jpg" alt="a fire-breathing cat">
       </div>
 
       <div class="photo-frame">
-        <img src="grr.jpg" alt="a cat making a weird face">
+        <img srcset="grr.jpg 1280w, grr-800w.jpg 800w, grr-400w.jpg 400w"
+              sizes="(max-width: 800px) 400px, (max-width: 1600px) 800px, (min-width: 1601px) 1200px"
+              src="grr.jpg" alt="a cat making a weird face">
       </div>
     </div>
   </section>
